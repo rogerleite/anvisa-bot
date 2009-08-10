@@ -9,7 +9,7 @@ GEM_VERSION = "0.2.0"
 SUMMARY = "Pesquisa de produtos para saúde registrados"
 AUTHOR = "Roger Leite"
 EMAIL = "roger.barreto@gmail.com"
-HOMEPAGE = "TODO HomePage"
+HOMEPAGE = "http://github.com/rogerleite/anvisa-bot"
 
 
 spec = Gem::Specification.new do |s|
