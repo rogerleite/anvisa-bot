@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{anvisa-bot}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roger Leite"]
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.default_executable = %q{anvisa-bot}
   s.email = %q{roger.barreto@gmail.com}
   s.executables = ["anvisa-bot"]
-  s.files = ["lib/anvisa_bot.rb", "lib/anvisa_parser.rb", "lib/anvisa_browser.rb", "Rakefile", "README.textile", "bin", "lib", "pkg", "spec", "nbproject", "fluxo_site_anvisa.txt", "anvisa-bot.gemspec", "bin/anvisa-bot"]
+  s.files = ["lib/anvisa_bot.rb", "lib/anvisa_browser.rb", "lib/anvisa_parser.rb", "README.textile", "Rakefile", "spec", "fluxo_site_anvisa.txt", "anvisa-bot.gemspec", "bin", "lib", "bin/anvisa-bot"]
   s.homepage = %q{http://github.com/rogerleite/anvisa-bot}
   s.require_paths = ["bin", "lib"]
   s.rubyforge_project = %q{anvisa-bot}

@@ -5,7 +5,7 @@ require 'rake/gempackagetask'
 require 'spec/rake/spectask'
 
 GEM = "anvisa-bot"
-GEM_VERSION = "0.2.0"
+GEM_VERSION = "0.2.1"
 SUMMARY = "Pesquisa de produtos para saúde registrados"
 AUTHOR = "Roger Leite"
 EMAIL = "roger.barreto@gmail.com"
