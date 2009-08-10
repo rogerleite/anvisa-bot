@@ -1,0 +1,38 @@
+===Fluxo para pesquisa por num. de registro no site da Anvisa===
+
+POST rconsulta_produto_internet.asp
+
+CO_TIPO_PRODUTO=8
+Area=Cosmético
+Processo=
+Produto=
+Registro=
+CNPJ=
+NO_EMPRESA=
+
+-recebo o html de produtos.
+-extrair os links e executar:
+
+POST rconsulta_produto_detalhe.asp
+
+CO_PRODUTO=var_codigo
+NO_EMPRESA=var_empresa
+NU_CNPJ=var_cnpj
+REGISTRO=var_registro
+
+NU_PROCESSO=
+NO_PRODUTO=
+NU_REGISTRO=
+NU_AUTORIZACAO=
+
+CO_TIPO_PRODUTO=8
+hdnpgAtual=1
+hdnmodo=
+PROCESSO=
+PRODUTO=
+EMPRESA=
+CNPJ=
+
+-recebe o html de detalhe do produto
+-extrair as informacoes e retornar
+

@@ -1,0 +1,169 @@
+<html><head>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Consulta de Produtos</title>
+	<script>
+	function Proxima()
+			{
+				document.dados.hdnmodo.value = 2;
+				document.dados.submit();
+			}
+
+			function Primeira()
+			{
+				document.dados.hdnmodo.value = 0;
+				document.dados.submit();
+			}
+
+			function Anterior()
+			{
+				document.dados.hdnmodo.value = 1;
+				document.dados.submit();
+			}
+	function ver_detalhes(codigo,empresa,cnpj)
+			{
+				dados.CO_PRODUTO.value = codigo;
+				dados.NO_EMPRESA.value = empresa;
+				dados.NU_CNPJ.value = cnpj;
+				dados.action = 'rconsulta_produto_detalhe.asp';
+				dados.submit();
+			}
+	</script>
+	<title>Anvisa -</title>
+
+<script src="jquery-1.3.1.min.js"></script>
+
+	</head>
+
+	<body topmargin="0" leftmargin="0" bgcolor="#ffffff" marginheight="0" marginwidth="0">
+	<link href="rconsulta_produto_internet.asp_files/sistema_divs_formulario.css" rel="stylesheet" type="text/css">
+
+
+
+	<table border="0" width="705">
+		<tbody><tr>
+			<td colspan="2">
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+  <tbody><tr>
+    <td align="left" bgcolor="#ffcc00"><a href="http://portal.saude.gov.br/saude/" target="_blank"><img src="rconsulta_produto_internet.asp_files/logo_saude2_peq.gif" alt="Acesse o Portal  do Ministério da Saúde" border="0" height="21" width="158"></a></td>
+    <td align="right" bgcolor="#ffcc00"><a href="http://www.brasil.gov.br/" target="_blank"><img src="rconsulta_produto_internet.asp_files/brasil2.gif" alt="Acesse o Portal do Governo Brasileiro" border="0" height="21" width="74"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="rconsulta_produto_internet.asp_files/linhaverdecabecalho.gif" height="6" width="760"></td>
+  </tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" width="760">
+  <tbody><tr>
+    <td width="158"><a href="http://www.anvisa.gov.br/"><img name="logo_extensa_site" src="rconsulta_produto_internet.asp_files/logo_extensa_site.gif" alt="" border="0" height="52" width="158"></a>
+    </td>
+    <td align="center" background="rconsulta_produto_internet.asp_files/background_titulo.gif" bgcolor="#99cc66" valign="middle" width="398"><b><b></b></b></td>
+    <td bgcolor="#669966" width="204"><img src="rconsulta_produto_internet.asp_files/teclado_verde.gif" height="52" width="204"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#99cc66" height="18" width="166"><img name="sistema_r3_c1" src="rconsulta_produto_internet.asp_files/sistema_r3_c1.gif" alt="" border="0" height="18" width="158"></td>
+    <td bgcolor="#669900" width="396"> <table align="center" border="0" cellpadding="0" cellspacing="0" width="396">
+        <tbody><tr> </tr>
+        <tr>
+          <td align="center" valign="middle"><a href="http://www.anvisa.gov.br/institucional/index.htm" class="menu">Institucional</a></td>
+          <td align="center" valign="middle"><a href="http://www.anvisa.gov.br/divulga/index.htm" class="menu">Anvisa Divulga</a></td>
+          <td align="center" valign="middle"><a href="http://www.anvisa.gov.br/servicos/index.htm" class="menu">Serviços</a></td>
+          <td align="center" valign="middle"><a href="http://www.anvisa.gov.br/areas/index.htm" class="menu">Áreas de Atuação</a></td>
+          <td align="center" valign="middle"><a href="http://www.anvisa.gov.br/legis/index.htm" class="menu">Legislação</a></td>
+        </tr>
+      </tbody></table></td>
+    <td bgcolor="#99cc66"><img name="sistema_r3_c3" src="rconsulta_produto_internet.asp_files/sistema_r3_c3.gif" alt="" border="0" height="18" width="24"><a href="http://www.anvisa.gov.br/cidadao/index.htm" target="_parent"><img name="cidadao" src="rconsulta_produto_internet.asp_files/cidadao.gif" alt="" border="0" height="18" width="56"></a><a href="http://www.anvisa.gov.br/profissional/index.htm" target="_parent"><img name="saude" src="rconsulta_produto_internet.asp_files/saude.gif" alt="" border="0" height="18" width="68"></a><a href="http://www.anvisa.gov.br/regulado/index.htm" target="_parent"><img name="regulado" src="rconsulta_produto_internet.asp_files/regulado.gif" alt="" border="0" height="18" width="56"></a></td>
+  </tr>
+</tbody></table>
+
+<table border="0" cellspacing="0" width="760">
+    <tbody><tr>
+    <td>&nbsp;</td>
+  </tr>
+</tbody></table></td>
+		</tr>
+		<tr>
+			<td align="left"><br><small><font face="tahoma"><b> Resultados <font color="blue">1 </font>- <font color="blue">1</font> de <font color="blue">1</font> produtos encontrados</b></font></small></td>
+		</tr>
+	</tbody></table>
+
+	<br>
+	<table class="formulario" border="0" cellpadding="1" cellspacing="1" width="95%">
+	<thead>
+		<tr>
+			<th class="titular" colspan="5" align="center">
+
+			            &nbsp;<a class="semborda" href="javascript:Proxima();">Próxima</a>&nbsp;
+
+			</th>
+		</tr>
+		<tr>
+			<th colspan="5" align="right">
+				<input value="Nova Consulta" name="Consultarn" onclick="window.location.href='consulta_correlato.asp'" class="inputbusca" type="button">
+			</th>
+		</tr>
+	  <tr>
+		<th width="70%">Produto</th>
+	    <th width="12%">Registro</th>
+	    <th width="18%">Situação</th>
+	  </tr>
+	</thead>
+	<tbody>
+
+					<tr>
+						<th colspan="5" align="left">Empresa :
+						LABORATÓRIOS B. BRAUN S/A&nbsp; &nbsp;CNPJ : 31.673.254/0001-02
+						</th>
+					</tr>
+
+		   <form action="rconsulta_produto_internet.asp" method="post" name="dados"></form>
+		   <tr style="cursor: default;" onmouseover="bgColor='#F0FFF0';" onmouseout="bgColor='#FFFFFF'" bgcolor="#ffffff" valign="middle">
+				<td align="left"><a href="javascript:ver_detalhes('302629','LABORAT%C3%93RIOS%20B.%20BRAUN%20S/A','31673254000102');" onmouseover="window.status='Anvisa';return true;">CANULA DE VERESS AESCULAP</a>
+
+				</td>
+				<td bordercolor="#c0c0c0">
+					<font color="#000000" face="Verdana, Arial, Helvetica, Geneva" size="1">
+					10008530225
+					</font>
+				</td>
+				<td bordercolor="#c0c0c0">
+					<font color="#000000" face="Verdana, Arial, Helvetica, Geneva" size="1">
+		    Publicado Deferimento
+					</font>
+				</td>
+		    </tr>
+
+	</tbody>
+	<tfoot>
+	</tfoot>
+	</table>
+		<input name="NU_PROCESSO" type="hidden">
+		<input name="NO_PRODUTO" type="hidden">
+		<input name="NU_REGISTRO" type="hidden">
+		<input name="NO_EMPRESA" type="hidden">
+		<input name="CO_PRODUTO" type="hidden">
+		<input name="NU_AUTORIZACAO" type="hidden">
+		<input name="NU_CNPJ" type="hidden">
+		<input name="CO_TIPO_PRODUTO" value="8" type="hidden">
+		<input name="hdnpgAtual" value="1" type="hidden">
+		<input name="hdnmodo" value="" type="hidden">
+		<input name="PROCESSO" value="" type="hidden">
+		<input name="PRODUTO" value="" type="hidden">
+		<input name="EMPRESA" value="" type="hidden">
+		<input name="REGISTRO" value="10008530225" type="hidden">
+		<input name="CNPJ" value="" type="hidden">
+
+<br><br>
+<table border="0" width="705">
+	<tbody><tr>
+		<td><link href="rconsulta_produto_internet.asp_files/www.html" rel="stylesheet" type="text/css">
+<div class="rodapealto" style="">Agência Nacional de Vigilância Sanitária - SEPN 515, Bl.B,
+Ed.Ômega - Brasília (DF) CEP 70770-502 - Tel: (61) 448-1000 - Disque
+Saúde: 0 800 61 1997</div>
+<div class="Rodape" style="">Copyright © 2003 Anvisa</div>
+<!-- fim do código para os includes--></td>
+	</tr>
+</tbody></table>
+
+</body></html>
+

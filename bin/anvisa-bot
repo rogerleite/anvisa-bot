@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+# Exemplo de comando:
+# ruby bin/anvisa-bot.rb 10008530225
+# exemplos de registros anvisa:
+# - 10008530225
+# - 10247530027
+# - 80175510005
+
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + "/../lib")
+
+require "anvisa_bot"
+
+args = ARGV.dup
+ARGV.clear
+
+puts "usage: anvisa-bot <registro_anvisa>"
+
+numero_registro = args[0]
+produto = AnvisaBot.consulta_produto_por_registro(numero_registro)
+
+puts produto.to_yaml
+
+=begin
+puts <<HTML
+<html>
+<body>
+<div>
+<p>empresa: #{produto.empresa}</p><br>
+<p>modelo: #{produto.modelo}</p>
+</div>
+</body>
+</html>
+HTML
+=end
