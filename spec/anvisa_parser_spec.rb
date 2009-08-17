@@ -1,6 +1,8 @@
 $LOAD_PATH << File.expand_path(File.dirname(__FILE__) + "/../lib")
 
 require "anvisa_parser"
+require "anvisa_browser"
+require "anvisa_bot"
 
 describe "AnvisaParser" do
 
@@ -39,6 +41,16 @@ describe "AnvisaParser" do
     produto.processo.should eql('25000.000651/99-61')
     produto.origem.should eql("FABRICANTE : AESCULAP AG - ALEMANHA\n")
     produto.vencimento_registro.should eql('11/3/2014')
+  end
+
+  it "quando ocorrer algum problema, retornar o erro no objeto produto" do
+    AnvisaBrowser.stub!(:consulta_produto_por_registro).and_return {
+      raise "fake exception"
+    }
+
+    produto = AnvisaBot.consulta_produto_por_registro(12345678)
+    produto.error?.should eql(true)
+    produto.error.should_not be_nil
   end
 
 end

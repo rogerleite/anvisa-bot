@@ -17,7 +17,13 @@ class AnvisaParser
     links
   end
 
-  def self.extract_produto(plain_html)
+  def self.extract_produto(plain_html, exception = nil)
+    if !!exception
+      produto = Produto.new({})
+      produto.error = exception
+      return produto
+    end
+
     html = Hpricot(plain_html)
 
     table = html.at("table.formulario")
@@ -67,13 +73,18 @@ class Produto
 
   attr_accessor :empresa, :cnpj, :autorizacao,
                   :nome, :modelo, :registro,
-                  :processo,:origem, :vencimento_registro
+                  :processo,:origem, :vencimento_registro,
+                  :error
 
   def initialize(args)
     raise ArgumentError("Args have to be a Hash with attributes") unless args.is_a?(Hash)
     args.each do |att, value|
       self.send("#{att}=", value)
     end
+  end
+
+  def error?
+    !!error
   end
 
 end
