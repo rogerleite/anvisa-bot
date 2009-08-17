@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.default_executable = %q{anvisa-bot}
   s.email = %q{roger.barreto@gmail.com}
   s.executables = ["anvisa-bot"]
-  s.files = ["lib/anvisa_bot.rb", "lib/anvisa_parser.rb", "lib/anvisa_browser.rb", "Rakefile", "README.textile", "bin", "lib", "pkg", "spec", "nbproject", "fluxo_site_anvisa.txt", "anvisa-bot.gemspec", "bin/anvisa-bot"]
+  s.files = ["lib/anvisa_bot.rb", "lib/anvisa_parser.rb", "lib/anvisa_browser.rb", "Rakefile", "FLUXO_SITE_ANVISA.txt", "README.textile", "bin/anvisa-bot"]
   s.homepage = %q{http://github.com/rogerleite/anvisa-bot}
   s.require_paths = ["bin", "lib"]
   s.rubyforge_project = %q{anvisa-bot}

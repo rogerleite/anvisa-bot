@@ -18,7 +18,7 @@ spec = Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary = SUMMARY
   s.require_paths = ['bin', 'lib']
-  s.files = FileList['bin/*.rb', 'lib/**/*.rb', '[A-Z]*', '[a-z]*'].to_a
+  s.files = FileList['bin/*.rb', 'lib/**/*.rb', '[A-Z]*'].to_a
   s.executables = ["anvisa-bot"]
 
   s.author = AUTHOR
