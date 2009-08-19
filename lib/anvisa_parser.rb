@@ -17,12 +17,7 @@ class AnvisaParser
     links
   end
 
-  def self.extract_produto(plain_html, exception = nil)
-    if !!exception
-      produto = Produto.new({})
-      produto.error = exception
-      return produto
-    end
+  def self.extract_produto(plain_html)
 
     html = Hpricot(plain_html)
 
@@ -74,7 +69,7 @@ class Produto
   attr_accessor :empresa, :cnpj, :autorizacao,
                   :nome, :modelo, :registro,
                   :processo,:origem, :vencimento_registro,
-                  :error
+                  :error, :not_found
 
   def initialize(args)
     raise ArgumentError("Args have to be a Hash with attributes") unless args.is_a?(Hash)
@@ -85,6 +80,10 @@ class Produto
 
   def error?
     !!error
+  end
+
+  def not_found?
+    !!not_found
   end
 
 end

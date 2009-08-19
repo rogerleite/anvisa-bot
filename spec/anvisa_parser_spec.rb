@@ -41,16 +41,39 @@ describe "AnvisaParser" do
     produto.processo.should eql('25000.000651/99-61')
     produto.origem.should eql("FABRICANTE : AESCULAP AG - ALEMANHA\n")
     produto.vencimento_registro.should eql('11/3/2014')
+
+    produto.error?.should eql(false)
+    produto.error.should be_nil
+    produto.not_found?.should eql(false)
   end
 
   it "quando ocorrer algum problema, retornar o erro no objeto produto" do
-    AnvisaBrowser.stub!(:consulta_produto_por_registro).and_return {
-      raise "fake exception"
+
+    AnvisaBot.stub!(:create_anvisa_browser).and_return {
+      a = AnvisaBrowser.new
+      a.stub!(:consulta_produto_por_registro).and_return {
+        raise "fake exception"
+      }
+      a
     }
 
     produto = AnvisaBot.consulta_produto_por_registro(12345678)
     produto.error?.should eql(true)
     produto.error.should_not be_nil
+  end
+
+  it "quando ocorrer nao encontrar o registro na anvisa, retornar not_found no objeto produto" do
+
+    AnvisaBot.stub!(:create_anvisa_browser).and_return {
+      a = AnvisaBrowser.new
+      a.stub!(:consulta_produto_por_registro).and_return {
+        read_html('anvisa_parser_rconsulta_produto_internet_NAO_OK.asp.html')
+      }
+      a
+    }
+
+    produto = AnvisaBot.consulta_produto_por_registro('10008530225')
+    produto.not_found?.should eql(true)
   end
 
 end
