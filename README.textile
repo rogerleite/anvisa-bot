@@ -11,7 +11,7 @@ http://www.anvisa.gov.br/scriptsweb/correlato/correlato.htm
 
 h2. Instalação
 
-@sudo gem install rogerleite-anvisa-bot -s http://gems.github.com@
+@sudo gem install anvisa-bot
 
 h2. Usando como executável
 
